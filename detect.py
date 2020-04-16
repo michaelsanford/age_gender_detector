@@ -101,16 +101,19 @@ if __name__ == '__main__':
     parser.add_argument(
         '-f',
         '--face',
+        default='face_detector',
         help='path to face detector model directory'
     )
     parser.add_argument(
         '-a',
         '--age',
+        default='age_detector',
         help='path to age detector model directory'
     )
     parser.add_argument(
         '-g',
         '--gender',
+        default='gender_detector',
         help='path to gender detector model directory'
     )
     parser.add_argument(

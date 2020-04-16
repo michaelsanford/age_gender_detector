@@ -18,10 +18,22 @@ To properly run this example you will need to have Python installed (Anaconda di
 ## Usage
 
 1. Fork the repo.
-2. Clone your forked repo.
-3. Locate a picture on the images folder and run the following code:
+1. Clone your forked repo.
+1. `pip install requirements.txt`
+1. Locate a picture and run the following code:
 
-Run `python detect.py --image images/[your_image_name] --face face_detector --age age_detector --gender gender_detector --confidence [confidence(0-1)]`
+To use pre-trained models and a confidence threshold of `0.5`, run
+```
+python detect.py --image [image_path]
+```
+
+You may also specify Caffe models and/or a confidence threshold:
+
+```
+python detect.py --image [image_path] --face [face_detector_path] --age [age_detector_path] --gender [gender_detector_path] --confidence [0.0 - 1.0]
+```
+
+Which will overlay results into `output.jpg` and write detections to the console.
 
 ## Other
 
